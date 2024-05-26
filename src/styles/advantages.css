@@ -1,0 +1,58 @@
+.advantage-parent {
+  background: url("../assets//img/others/bike.jpeg");
+  margin: 100px auto;
+  padding: 100px 0 150px 0;
+  text-align: center;
+  background-repeat: no-repeat;
+  border-top: 20px solid #22eaaa;
+  background-size: cover;
+  position: relative;
+}
+
+.advantage-parent::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(35, 33, 33, 0.8);
+  z-index: 0;
+}
+
+.advantage-parent h1 {
+  font-weight: bolder;
+  margin-bottom: 90px;
+  z-index: 1;
+  position: relative;
+  color: white;
+}
+
+.advantage-text {
+  position: relative;
+  z-index: 1;
+  gap: 50px;
+  display: grid;
+  color: white;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+}
+
+.advantage-text div h2 {
+  max-width: 200px;
+}
+
+.advantage-text svg {
+  font-size: 40px;
+  fill: #22eaaa;
+}
+
+.advantage-text div {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .advantage-text div h2 {
+   font-size: 20px;
+  }
+}

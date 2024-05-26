@@ -1,0 +1,111 @@
+.bg-parent {
+  opacity: 0.7;
+  background-color: black;
+  color: rgb(217, 211, 211);
+}
+
+.contact-parent {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 50px 100px;
+  margin-top: 100px;
+}
+
+.contact-left p {
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+.contact-left {
+  max-width: 600px;
+}
+.contact-left input {
+  border: 1px solid grey;
+  padding: 15px 25px;
+  width: 65%;
+  outline: none;
+  margin-top: 20px;
+  border-radius: 25px;
+}
+
+.contact-left button {
+  border: none;
+  background-color: #22eaaa;
+  padding: 15px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.contact-left button:hover {
+  background-color: #09cc8e;
+}
+
+.touch {
+  margin-top: 130px;
+}
+
+.contact-right {
+  display: flex;
+  position: relative;
+  gap: 100px;
+  z-index: 2;
+}
+
+.contact-right div {
+  display: flex;
+  gap: 10px;
+  min-width: 100px;
+  flex-direction: column;
+}
+
+.margin-cls {
+  margin-top: 110px;
+}
+
+.contact {
+  margin-top: 30px;
+}
+
+.shop {
+  margin-top: 50px;
+}
+
+.dev {
+  text-align: center;
+  padding: 50px 0 30px 0;
+}
+
+.dev u {
+  color: #22eaaa;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .contact-parent {
+    padding: 50px 30px;
+  }
+
+  .contact-right {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-parent {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+  }
+
+  .contact-right {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-parent {
+    padding: 50px 10px;
+  }
+}
