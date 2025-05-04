@@ -1,0 +1,300 @@
+.user-account {
+  padding: 20px 10%;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.user-account .navbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.img-pr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-account .navbar a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  text-align: center;
+  align-self: end;
+}
+
+.user-account .navbar a.active {
+  border-bottom: 2px solid #22eaaa;
+}
+
+.wish-list .top {
+  position: absolute;
+  top: 120px;
+}
+
+.wish-list .single-heart {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  gap: 30px;
+  border-bottom: 1px solid rgb(228, 222, 222);
+}
+
+.res {
+  display: none;
+}
+
+.wish-list .empty {
+  font-size: 20px;
+  margin-top: 100px;
+  text-align: start;
+}
+
+.wish-list .single-heart img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.single-heart .name {
+  color: #0072bc;
+  font-weight: bold;
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.single-heart .name:hover {
+  text-decoration: underline;
+}
+
+.single-heart svg {
+  font-size: 25px;
+}
+
+.single-heart p {
+  font-size: 20px;
+}
+
+.single-heart small {
+  color: rgb(38, 190, 38);
+  font-weight: bold;
+  width: 200px;
+  display: block;
+  margin-top: 5px;
+}
+
+.wish-list .remove {
+  text-align: end;
+  cursor: pointer;
+  color: #028ce8;
+}
+
+.wish-list .remove:hover {
+  text-decoration: underline;
+}
+
+.single-heart button {
+  background-color: #deecf7;
+  border: none;
+  padding: 15px 10px;
+  width: 120px;
+  cursor: pointer;
+}
+
+.single-heart button:last-child {
+  background-color: #e9eaeb;
+}
+
+.single-heart button:first-child:hover {
+  background-color: #d0e2f1;
+}
+
+.single-heart button:last-child:hover {
+  background-color: #eef1f3;
+}
+
+.single-heart .trash-price {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.single-heart .btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.wish-list .date {
+  color: #063757;
+  font-weight: normal;
+}
+
+.wish-list .single-heart svg {
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .user-account .navbar {
+    font-size: 13px;
+  }
+  .wish-list h1 {
+    font-size: 20px;
+  }
+
+  .wish-list .single-heart img {
+    width: 150px;
+    height: auto;
+  }
+
+  .single-heart button {
+    padding: 10px 5px;
+    width: 100px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 750px) {
+  .user-account {
+    padding: 20px 0;
+    width: 95vw;
+  }
+
+  .user-account .nav-parent {
+    width: 100%;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .user-account .navbar {
+    width: 650px;
+  }
+
+  .single-heart .name {
+    font-size: 15px;
+  }
+
+  .single-heart p {
+    font-size: 15px;
+  }
+
+  .single-heart small {
+    font-size: 10px;
+  }
+
+  .wish-list .single-heart img {
+    width: 100px;
+    height: auto;
+  }
+
+  .single-heart button {
+    padding: 5px;
+    width: 80px;
+    font-size: 10px;
+  }
+
+  .wish-list .single-heart svg {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wish-list .single-heart {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  .res {
+    display: block;
+  }
+
+  .wish-list .single-heart img {
+    width: 80px;
+    height: auto;
+  }
+
+  .single-heart .name,
+  .single-heart p {
+    transform: translateY(-30px);
+    font-size: 16px;
+  }
+
+  .single-heart small {
+    font-size: 13px;
+    transform: translateY(-30px);
+  }
+
+  .trash-price small {
+    transform: translate(0);
+    font-size: 18px;
+  }
+
+  .wish-list .single-heart svg {
+    font-size: 30px;
+    align-self: flex-start;
+  }
+
+  .remove{
+    font-size: 13px;
+  }
+  .res-none {
+    display: none;
+  }
+
+  .single-heart button {
+    padding: 10px 5px;
+    width: 100px;
+    font-size: 12px;
+  }
+
+  .single-heart .name,
+  .single-heart p,
+  .single-heart small {
+    transform: translate(0px);
+  }
+
+  .single-heart .trash-price {
+    width: 100%;
+  }
+
+  .single-heart .trash-price .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .trash-price .btn-group button {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (max-width:400px) {
+  .wish-list .single-heart img {
+    width: 80px;
+    height: auto;
+  }
+
+  .img-pr {
+    gap: 0px;
+  }
+
+  .single-heart .name,
+  .single-heart p {
+    font-size: 13px;
+  }
+
+  .single-heart small {
+    font-size: 10px;
+  }
+
+  .trash-price small {
+    font-size: 15px;
+  }
+}

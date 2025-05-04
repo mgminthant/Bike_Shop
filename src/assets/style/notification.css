@@ -1,0 +1,69 @@
+.add-alert-parent {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(187, 185, 186, 0.3);
+  top: 0;
+  left: 0;
+  z-index: 7;
+}
+
+.add-alert-parent div {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  padding: 20px;
+  width: 500px;
+  max-width: 95vw;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.add-alert-parent div .close{
+  position: absolute;
+  left: -10px;
+  cursor: pointer;
+  fill: black;
+  top: -10px;
+}
+
+.add-alert-parent div small:first-child {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: green;
+  font-size: 20px;
+}
+
+.add-alert-parent svg {
+  fill: green;
+  font-size: 28px;
+}
+
+.add-alert-parent div .btn {
+  background-color: black;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 7px 10px;
+}
+
+.add-alert-parent div .btn:hover {
+  background-color: rgb(54, 52, 52);
+}
+
+@media (max-width: 450px) {
+  .add-alert-parent div small:first-child{
+    font-size: 15px;
+  }
+  .add-alert-parent svg{
+    font-size: 20px;
+  }
+
+  .add-alert-parent div .btn{
+    font-size: 10px;
+  }
+}

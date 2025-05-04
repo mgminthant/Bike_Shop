@@ -1,0 +1,166 @@
+.account-parent {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(187, 185, 186, 0.3);
+  top: 0;
+  left: 0;
+  z-index: 7;
+}
+
+.account {
+  overflow: scroll;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: white;
+  z-index: 5;
+  width: 600px;
+  max-width: 100vw;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.second-account-parent {
+  padding: 30px 30px;
+}
+
+.account-parent svg {
+  font-size: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.account-topbar {
+  padding: 10px;
+  background-color: #22eaaa;
+  color: white;
+  justify-content: space-between;
+  font-size: 18px;
+  display: flex;
+}
+
+.account-topbar span {
+  text-align: center;
+}
+.second-account-parent button {
+  width: 100%;
+}
+
+.second-account-parent .login {
+  background-color: black;
+}
+
+.second-account-parent .join,
+.login {
+  color: white;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.second-account-parent .join {
+  background-color: #bbc6c4;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(200, 200, 196);
+  margin: 50px 0;
+}
+
+.join-parent div {
+  display: flex;
+  gap: 10px;
+}
+
+.join-parent div span {
+  font-size: 17px;
+  opacity: 0.7;
+}
+
+.join-parent a {
+  color: white;
+  text-decoration: none;
+}
+
+.did-floating-label-content {
+  position: relative;
+  max-width: 95vw;
+}
+
+.did-floating-label {
+  font-size: 14px;
+  color: #818e9d;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 15px;
+  top: 10px;
+  padding: 0 5px;
+  background: #fff;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.did-floating-input {
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  height: 36px;
+  padding: 19px 20px;
+  background: #fff;
+  color: #323840;
+  border: 1px solid #3d85d8;
+  border-radius: 4px;
+  &:focus {
+    outline: none;
+    ~ .did-floating-label {
+      top: -8px;
+      font-size: 13px;
+    }
+  }
+}
+
+.did-floating-input:not(:placeholder-shown) ~ .did-floating-label {
+  top: -8px;
+  font-size: 13px;
+}
+
+.did-floating-label-content svg {
+  position: absolute;
+  right: 10px;
+  font-size: 18px;
+  top: 9px;
+  fill: #818e9d;
+  cursor: pointer;
+}
+
+.mem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 30px;
+}
+
+.got {
+  margin: 30px 0;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.value svg {
+  fill: black;
+  opacity: 1;
+}
+
+@media (max-width: 400px) {
+  .second-account-parent,
+  .account-topbar {
+    padding: 10px;
+  }
+}

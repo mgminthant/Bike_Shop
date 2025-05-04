@@ -1,0 +1,7 @@
+.single-heart{
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+    gap: 10px;
+    border-bottom: 1px solid rgb(228, 222, 222);
+}
