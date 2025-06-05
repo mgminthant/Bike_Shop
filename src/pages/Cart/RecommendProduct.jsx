@@ -1,5 +1,5 @@
-import React from "react";
 import "../../assets/style/cart/recommend.css";
+
 export default function RecommendProduct() {
   return (
     <section className="recommendations">

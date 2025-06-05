@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaChevronLeft } from "react-icons/fa";
 
 import HeroBike from "./HeroBike.jsx";
-import data from "../../data/data.js";
-import "../../assets/style/home/hero.css";
 import HeroBikeNav from "./HeroBikeNav.jsx";
+
+import data from "../../data/data.js";
+
+import "../../assets/style/home/hero.css";
+
 const Hero = () => {
   const [index, setIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
@@ -38,7 +41,7 @@ const Hero = () => {
         ))}
         <FaChevronLeft onClick={() => changeHeroBike(false)} />
       </div>
-      <HeroBike data={data} index={index} animate={animate} />
+      <HeroBike product={data.totalProducts[index]} animate={animate} />
       <div className="right-section">
         <span>FACEBOOK</span>
         <span>YOUTUBE</span>

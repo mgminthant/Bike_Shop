@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { redeemCodeFn } from "../../Redux/slices/redeemSlice";
+import { redeemCodeFn } from "../../redux/slices/redeemSlice";
 
 export default function RedeemCode() {
   const dispatch = useDispatch();

@@ -8,3 +8,10 @@ body {
   background-color: white;
   font-family: Nunito;
 }
+
+.outofstock svg:first-child,
+.dis-btn,
+.outofstock {
+  opacity: 0.5;
+  pointer-events: none;
+}

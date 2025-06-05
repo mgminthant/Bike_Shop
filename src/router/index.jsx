@@ -1,16 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../layout/RootLayout";
 import AccountLayout from "../layout/AccountLayout";
-import ProductLayout from "../layout/ProductLayout";
 
 import Index from "../pages/Home/Index.jsx";
 import Product from "../pages/Product/Index.jsx";
 import CreateAccount from "../pages/Auth/Signup.jsx";
-import WishList from "../pages/Auth/WishList.jsx";
+import WishList from "../pages/acc-feats/WishList.jsx";
 import Order from "../pages/Auth/Order.jsx";
 import Cart from "../pages/Cart/Index.jsx";
 import CheckoutForm from "../pages/Checkout/Index.jsx";
-import ProductDetail from "../pages/Product/ProductDetail/Index.jsx";
+import ProductDetail from "../pages/ProductDetail/Index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -22,12 +21,10 @@ const router = createBrowserRouter([
         element: <Index />,
       },
       {
-        path: "product",
-        element: <ProductLayout />,
-        children: [
-          { path: "total", element: <Product /> },
-          { path: "detail", element: <ProductDetail /> },
-        ],
+        path: "product", element: <Product />
+      },
+      {
+        path:"product/detail/:id",element: <ProductDetail />,
       },
       {
         path: "createaccount",
@@ -42,11 +39,11 @@ const router = createBrowserRouter([
         element: <CheckoutForm />,
       },
       {
-        path: "useraccount",
+        path: "acc",
         element: <AccountLayout />,
         children: [
-          { path: "WishList", element: <WishList /> },
-          { path: "order", element: <Order /> },
+          { path: "wishlist", element: <WishList /> },
+          { path: "*", element: <Order /> },
         ],
       },
     ],

@@ -11,7 +11,7 @@ const Product = () => {
   const [select, setSelect] = useState("");
   const [cls, setCls] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
-  let totalBikes = useSelector((state) => state.bikes.bikeList);
+  let totalBikes = useSelector((state) => state.totalProducts.products);
 
   const prop = {
     setSelect,

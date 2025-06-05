@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { addToCart } from "../../Redux/slices/cartSlice";
-import { toggleFavourite } from "../../Redux/slices/favouriteSlice";
+import { addToCart } from "../../redux/slices/cartSlice";
+import { toggleFavourite } from "../../redux/slices/favouriteSlice";
 
 import ProductDataComp from "./ProductDataComp";
 import AddAlert from "../../components/overlays/notification/Notification.jsx";
@@ -17,6 +17,7 @@ const SingleProduct = ({ item }) => {
 
   const favouriteItems = useSelector((state) => state.favourite.favourites);
   const user = useSelector((state) => state.auth.user);
+  
   const addCartItems = useSelector((state) => state.cart.items);
 
   const isFavoriteItem = favouriteItems.includes(item.id);
@@ -37,6 +38,7 @@ const SingleProduct = ({ item }) => {
     dispatch(
       addToCart({
         id: item.id,
+        framesize: item.default_frame_size,
       })
     );
     setAlert("Cart");
@@ -55,6 +57,7 @@ const SingleProduct = ({ item }) => {
     dispatch(
       addToCart({
         id: item.id,
+        framesize: item.default_frame_size,
       })
     );
     navigate("/cart");
@@ -65,9 +68,10 @@ const SingleProduct = ({ item }) => {
       {alert !== "" && (
         <AddAlert
           whatAdd={alert}
+          isFavourite={isFavoriteItem}
           go={alert === "Cart" ? "SHOPPING CART" : "WishList"}
           setAlert={setAlert}
-          goToHandler={() => navigate("/cart")}
+          goToHandler={() => navigate(alert==="Cart" ? "/cart" : '/acc/wishlist')}
         />
       )}
       <ProductDataComp
@@ -78,7 +82,7 @@ const SingleProduct = ({ item }) => {
         singleItemInCart={singleItemInCart}
         isFavoriteItem={isFavoriteItem}
       />
-      {showLogin && <Login setShowLogin={setShowLogin}/>}
+      {showLogin && <Login setShowLogin={setShowLogin} />}
     </div>
   );
 };

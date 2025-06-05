@@ -13,12 +13,14 @@ import Login from "../../overlays/Auth/Login.jsx";
 export default function TopBar({ count }) {
   const isAuth = useSelector((state) => state.auth.user);
   const navigate = useNavigate();
+
   const [isOpenCart, setIsOpenCart] = useState(false);
   const [showLogin,setShowLogin] = useState(false);
 
   const handleLogin=()=>{
     setShowLogin(true);
   }
+
   return (
     <div className="top-bar">
       <div className="left">
@@ -36,16 +38,16 @@ export default function TopBar({ count }) {
           className="heart"
           onClick={() => {
             if (isAuth) {
-              navigate("/useraccount/wishlist");
+              navigate("/acc/wishlist");
             } else {
-              dispatch(clickHeart(true));
+              handleLogin();
             }
           }}
         >
           <FaHeart />
           <span className="noti">{count.favouriteItemsCount}</span>
         </div>
-        {isOpenCart && <MiniCart setIsOpenCart={setIsOpenCart} />}
+        {isOpenCart && <MiniCart setIsOpenCart={setIsOpenCart}/>}
         <div className="cart" onClick={() => setIsOpenCart(true)}>
           <FaShoppingCart />
           <span className="noti">{count.cartItemscount}</span>

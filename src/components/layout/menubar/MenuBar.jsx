@@ -9,9 +9,9 @@ export default function MenuBar() {
         <span>Cod.</span>
       </div>
       <div className="menu">
-        <NavLink to="./">Home</NavLink>
-        <NavLink to="./product">Product</NavLink>
-        <NavLink to="./about">About</NavLink>
+        <NavLink to="">Home</NavLink>
+        <NavLink to="product">Product</NavLink>
+        <NavLink to="about">About</NavLink>
       </div>
     </div>
   );

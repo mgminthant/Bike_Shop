@@ -1,9 +1,11 @@
-import React from "react";
 import { CiTrash } from "react-icons/ci";
-import { deleteCartItem } from "../../../Redux/action";
+import { deleteCartItem } from "../../../redux/action";
 import "../../../assets/style/cart/cart.css";
+import {useDispatch} from "react-redux";
+import {removeFromCart} from "../../../redux/slices/cartSlice.js";
 
-const SingleCart = ({ item }) => {
+const SingleItem = ({ item }) => {
+    const dispatch = useDispatch();
   return (
     <div className="single-cart">
       <div className="item-desc">
@@ -15,11 +17,11 @@ const SingleCart = ({ item }) => {
         </div>
       </div>
       <div className="trash-price">
-        <CiTrash onClick={() => dispatch(deleteCartItem(item.id))} />
-        <p>{item.price.toLocaleString()}$</p>
+        <CiTrash onClick={() => dispatch(removeFromCart(item.id))} />
+        <p>{item.price}$</p>
       </div>
     </div>
   );
 };
 
-export default SingleCart;
+export default SingleItem;

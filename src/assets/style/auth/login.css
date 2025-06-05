@@ -62,6 +62,9 @@
 
 .second-account-parent .join {
   background-color: #bbc6c4;
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 .line {

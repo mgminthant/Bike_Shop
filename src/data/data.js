@@ -5,10 +5,12 @@ import hero_bike4 from "../assets/img/hero-svg/hero-bike-4.png";
 import hero_bike5 from "../assets/img/hero-svg/hero-bike-5.png";
 
 const data = {
-  bikes: [
+  totalProducts: [
     {
-      id: Math.floor(Math.random() * 500),
+      id: "pd1-2-1",
       categ: "Gravel Bike",
+      productImgs: [hero_bike1, hero_bike2, hero_bike3],
+      framesizes: ["M", "L", "XL"],
       desc: {
         pd_name:
           "BMC KAIUS 01 LTD - Carbon Gravel Bike - 2024 - peacock spider",
@@ -25,10 +27,12 @@ const data = {
       model: "SRAM XPLR XG-1271",
       price: 11999,
       discount: 50,
-      frame_size: "M",
+      default_frame_size: "M",
     },
     {
-      id: Math.floor(Math.random() * 500),
+      id: "pd1-2-2",
+      productImgs: [hero_bike1, hero_bike2, hero_bike3],
+      framesizes: ["M", "L", "XL"],
       categ: "Gravel Bike",
       desc: {
         pd_name: "BMC KAIUS 01 ONE - Carbon Gravel Bike - 2023 - white & black",
@@ -44,11 +48,13 @@ const data = {
       img: hero_bike2,
       model: "SRAM Force AXS XPLR XG-1271",
       price: 11999,
-      discount: 0,
-      frame_size: "L",
+      discount: null,
+      default_frame_size: "L",
     },
     {
-      id: Math.floor(Math.random() * 500),
+      id: "pd1-2-3",
+      productImgs: [hero_bike1, hero_bike2, hero_bike3],
+      framesizes: ["M", "L", "XL"],
       categ: "Gravel Bike",
       desc: {
         pd_name:
@@ -65,11 +71,13 @@ const data = {
       img: hero_bike3,
       model: "SRAM XPLR XG-1271",
       price: 8999,
-      discount: 0,
-      frame_size: "M",
+      discount: null,
+      default_frame_size: "M",
     },
     {
-      id: Math.floor(Math.random() * 500),
+      id: "pd1-2-4",
+      productImgs: [hero_bike1, hero_bike2, hero_bike3],
+      framesizes: ["M", "L", "XL"],
       categ: "E-Bikes",
       desc: {
         pd_name:
@@ -86,11 +94,13 @@ const data = {
       img: hero_bike4,
       model: "Shimano CS-M7100",
       price: 4655,
-      discount: 0,
-      frame_size: "L",
+      discount: null,
+      default_frame_size: "L",
     },
     {
-      id: Math.floor(Math.random() * 500),
+      id: "pd1-2-5",
+      productImgs: [hero_bike1, hero_bike2, hero_bike3],
+      framesizes: ["M", "L", "XL"],
       categ: "Road Bikes",
       desc: {
         pd_name:
@@ -107,11 +117,13 @@ const data = {
       img: hero_bike5,
       model: "Shimano Ultegra CS-R8100",
       price: 6048,
-      discount: 0,
-      frame_size: "M",
+      discount: null,
+      default_frame_size: "M",
     },
     {
-      id: Math.floor(Math.random() * 500),
+      id: "pd1-2-6",
+      productImgs: [hero_bike1, hero_bike2, hero_bike3],
+      framesizes: ["M", "L", "XL"],
       categ: "Road Bikes",
       desc: {
         pd_name:
@@ -129,7 +141,7 @@ const data = {
       model: "Shimano Ultegra CS-R8100",
       price: 6048,
       discount: 5,
-      frame_size: "L",
+      default_frame_size: "L",
     },
   ],
   showAccount: false,

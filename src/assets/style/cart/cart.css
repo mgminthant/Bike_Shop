@@ -1,8 +1,13 @@
+.choice span{
+  color: #1e5180;
+  text-decoration: underline;
+  cursor: pointer;
+}
 .shop-cart-parent {
   display: flex;
-  justify-content: space-between;
-  margin-top: 100px;
-  padding: 0 100px;
+  margin-top: 5vw;
+  padding: 0 5vw;
+  gap: 3vw;
 }
 
 .shop-cart {
@@ -15,9 +20,12 @@
 
 .shop-cart img {
   width: 150px;
-  max-width: 80vw;
+  max-width: 60vw;
 }
 
+.your-cart{
+  margin: 10px 0;
+}
 .shop-cart-menu {
   display: flex;
   font-weight: 500;
@@ -96,14 +104,12 @@
 .payment {
   background-color: #f7f7f7;
   padding: 20px;
-  min-width: 320px;
-  transform: translateY(-70px);
+  margin-top: 5vw;
 }
 
 .reedem {
   display: flex;
   margin-top: 10px;
-  transform: translateY(-70px);
 }
 
 .reedem button {
@@ -230,6 +236,10 @@
   font-size: 17px;
   text-align: center;
 }
+
+.empty-text{
+  padding: 5vw;
+}
 @media (max-width: 1200px) {
   .shop-cart-menu {
     display: none;
@@ -237,6 +247,7 @@
 
   .single-shop-cart {
     flex-direction: column;
+    gap: 15px;
   }
 
   .single-shop-cart .shop-cart{
@@ -244,7 +255,7 @@
     justify-content: space-between;
     align-items:self-start;
   }
-  
+
   .count-div{
     align-items: center;
     text-align: end;
@@ -260,5 +271,44 @@
 
   .count-div .shop-total-price{
     justify-content: end;
+  }
+}
+
+@media (max-width: 900px) {
+  .shop-cart-parent{
+    flex-direction: column;
+    gap: 10vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .shop-cart .name {
+  font-size: 10px;
+  }
+
+  .shop-cart small{
+    font-size: 11px;
+  }
+.count-div{
+  gap: 10px;
+}
+  .single-shop-cart svg.trash{
+    font-size: 50px;
+  }
+
+  .your-cart{
+    font-size: 20px;
+  }
+
+  .choice,.shop-total-price,.price{
+    font-size: 15px;
+  }
+
+  .single-shop-cart .counter{
+    padding: 0 10px;
+  }
+
+  .empty-text{
+    font-size: 20px;
   }
 }

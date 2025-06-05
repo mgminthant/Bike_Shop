@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import "../styles/useraccount.css";
+import "../assets/style/auth/useraccount.css";
 const AccountLayout = () => {
   const [id, setId] = useState("wish");
 

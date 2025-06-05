@@ -36,7 +36,7 @@ export default function ShopCartItem({
         <div>
           <p className="name">{item.desc.pd_name}</p>
           <small>
-            Frame Size - <b>{item.frame_size}</b>
+            Frame Size - <b>{item.framesize}</b>
           </small>
           <small>
             Still <b>{item.desc.instock}</b> instock

@@ -1,11 +1,18 @@
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import SingleHeartItem from "../../components/SingleHeartItem";
-import "../../styles/useraccount.css";
-import { deleteAllHeartItem } from "../../Redux/action";
+import SingleHeartItem from "./SingleHeartItem.jsx";
+import "../../assets/style/auth/useraccount.css";
+import {deleteAllFavourite,deleteFavourite} from "../../redux/slices/favouriteSlice.js";
+import useGetData from "../../hooks/useGetData.js";
+
 const WishList = () => {
-  const heartItems = useSelector((state) => state.heart);
+  const heartItemsId = useSelector((state) => state.favourite.favourites);
   const dispatch = useDispatch();
+
+  const heartItems  = heartItemsId.map((heartItem) => {
+      let item = useGetData(heartItem);
+      return item;
+  });
+
   return (
     <div className="wish-list">
       <div className="top">
@@ -18,10 +25,10 @@ const WishList = () => {
         <h2 className="empty">Your Wish List is empty!</h2>
       )}
       {heartItems.map((item, index) => (
-        <SingleHeartItem item={item} key={index} />
+        <SingleHeartItem item={item} key={index} deleteFavourite={deleteFavourite} />
       ))}
       {heartItems.length !== 0 && (
-        <p className="remove" onClick={() => dispatch(deleteAllHeartItem())}>
+        <p className="remove" onClick={() => dispatch(deleteAllFavourite())}>
           Remove all products
         </p>
       )}

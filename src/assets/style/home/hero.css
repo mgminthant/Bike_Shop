@@ -2,18 +2,21 @@
   display: flex;
   text-align: center;
   justify-content: space-between;
-  margin-top: 2%;
+  margin-top: 5vw;
   max-height: 800px;
-  padding: 0px 40px;
+  padding: 0 5vw;
 }
 
 .left-section {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  position: relative;
+  z-index: 10;
 }
 
 .left-section svg {
-  font-size: 27px;
+  font-size: clamp(17px,1.5vw,1.5vw);
   user-select: none;
   cursor: pointer;
 }
@@ -21,7 +24,7 @@
 .left-section span {
   color: rgb(114, 111, 111);
   cursor: pointer;
-  font-size: 20px;
+  font-size: clamp(17px,1.5vw, 1.5vw);
   gap: 5px;
   display: flex;
   user-select: none;
@@ -43,14 +46,10 @@
   transform: rotate(270deg);
 }
 
-.left-section span:nth-child(2n) {
-  margin: 20px 0;
-}
-
 .left-section span.active,
 .left-section svg.active {
   color: black;
-  font-size: 27px;
+  font-size: clamp(20px,2vw, 1.5vw);
   font-weight: bold;
   fill: black;
   cursor: pointer;
@@ -58,19 +57,16 @@
 
 .right-section {
   display: flex;
-  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
+  gap: 30px;
 }
 
 .right-section span {
   cursor: pointer;
 }
 
-.right-section span:nth-child(2) {
-  margin: 30px 0;
-}
-
 .middle-section h1 {
-  font-size: 50px;
+  font-size: clamp(20px,3vw,4vw);
 }
 
 .middle-section p {
@@ -93,12 +89,11 @@
 
 .bike-img {
   position: relative;
-  z-index: -1;
 }
 
 .bike-img img {
   width: 800px;
-  max-width: 70vw;
+  max-width: 90vw;
   transform: translateY(-120px);
 }
 
@@ -138,24 +133,8 @@
 }
 
 @media (max-width: 900px) {
-  .left-section svg {
-    font-size: 20px !important;
-  }
-
-  .left-section span {
-    font-size: 16px;
-  }
-
-  .left-section span.active {
-    font-size: 20px;
-  }
-
   .left-section hr {
     width: 15px;
-  }
-
-  .middle-section h1 {
-    font-size: 40px;
   }
 
   .right-section span {
@@ -180,24 +159,8 @@
     margin-bottom: 50px;
   }
 
-  .left-section span {
-    font-size: 18px;
-  }
-
-  .left-section span.active{
-    font-size: 22px;
-  }
-
   .right-section {
     display: none;
-  }
-
-  .hero-parent {
-    margin-top: 50px;
-  }
-
-  .middle-section h1 {
-    font-size: 35px;
   }
 
   .buy {
@@ -213,8 +176,6 @@
   }
 
   .hero-parent {
-    padding: 0 10px;
-    margin-top: 20px;
     flex-direction: column-reverse;
   }
 
@@ -224,10 +185,6 @@
     align-items: center;
     margin-bottom: 50px;
     margin-top: 30%;
-  }
-
-  .middle-section h1 {
-    font-size: 25px;
   }
 
   .left-section span {
@@ -242,12 +199,8 @@
     transform: rotate(180deg);
   }
 
-  .left-section span:nth-child(2n) {
-    margin: 0 20px;
-  }
-
   .middle-section {
-    height: 350px;
+    height: 400px;
   }
 
   .bike-img div {

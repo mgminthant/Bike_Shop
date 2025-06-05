@@ -1,6 +1,12 @@
 import React from "react";
-import { FaCartPlus } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
+
+import { calculateDiscount } from "../../utils/priceUtils";
+
+import {FaArrowUpRightFromSquare, FaCartPlus} from "react-icons/fa6";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
+import { calculateInstockOrNot } from "../../utils/stockUtils";
+import {BiArrowFromLeft, BiArrowFromRight, BiRightArrow, BiSolidLeftArrow} from "react-icons/bi";
 
 export default function ProductDataComp({
   item,
@@ -18,10 +24,7 @@ export default function ProductDataComp({
         </div>
         <div
           className={`icon ${
-            item.desc.instock === 0 ||
-            singleItemInCart?.quantity === item.desc.instock
-              ? "outofstock"
-              : ""
+            calculateInstockOrNot(item.desc.instock, singleItemInCart?.quantity) ? "outofstock" : ""
           }`}
         >
           <FaCartPlus onClick={addToCartHandler} />
@@ -40,9 +43,7 @@ export default function ProductDataComp({
           </span>
           {item.discount !== 0 && (
             <span className="dis-price">
-              {Math.ceil(
-                item.price - item.price * (item.discount / 100)
-              ).toLocaleString() + " $"}
+              {calculateDiscount(item.price, item.discount)}
             </span>
           )}
         </h4>
@@ -52,13 +53,26 @@ export default function ProductDataComp({
             ? `${"Instock - " + item.desc.instock}`
             : "Out of Stock"}
         </h4>
+        <h5>Framesize : {item.default_frame_size}</h5>
         <p>{item.desc.pd_name}</p>
-        <button
-          onClick={buyNowBtnHandler}
-          className={`${item.desc.instock === 0 ? "dis-btn" : ""}`}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems:"center",
+            gap: "10px",
+          }}
         >
-          Buy Now
-        </button>
+          <button
+            onClick={buyNowBtnHandler}
+            className={`buynowbtn ${item.desc.instock === 0 ? "dis-btn" : ""}`}
+          >
+            Buy Now
+          </button>
+         <button className={'detail'}>
+           <NavLink to={`/product/detail/${item.id}`}>View Detail <FaArrowUpRightFromSquare/></NavLink>
+         </button>
+        </div>
       </div>
     </React.Fragment>
   );

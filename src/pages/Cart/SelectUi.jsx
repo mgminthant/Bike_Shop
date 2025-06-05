@@ -12,15 +12,15 @@ export default function SelectUi({ removeId, setRemoveId }) {
     }
   };
   return (
-    <div>
+    <div className={"choice"}>
       Select {total_cart_items.length - removeId.length} of
-      {total_cart_items.length} |{" "}
-      <p onClick={handleDeselectAll}>
+      {total_cart_items.length +" | "}
+      <span onClick={handleDeselectAll}>
         {total_cart_items.length === removeId.length
           ? "Select All "
-          : "Deselect All "}
+          : " Deselect All "}
         Articles
-      </p>
+      </span>
     </div>
   );
 }

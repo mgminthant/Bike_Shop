@@ -1,3 +1,6 @@
+.account-topbar svg{
+  fill: white !important;
+}
 .single-cart {
   display: flex;
   align-items: center;
